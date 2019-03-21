@@ -155,17 +155,17 @@ URL_GHUGENT_HPCUGENT = 'https://github.ugent.be/hpcugent/%(name)s'
 
 RELOAD_VSC_MODS = False
 
-VERSION = '0.12.1'
+VERSION = '0.12.2'
 
 log.info('This is (based on) vsc.install.shared_setup %s' % VERSION)
 
 # list of non-vsc packages that do not need python- prefix for correct rpm dependencies
 # vsc packages should be handled with clusterbuildrpm
-# dependencies starting with python- are also not re-prefixed
 NO_PREFIX_PYTHON_BDIST_RPM = ['pbs_python']
 
 # Hardcode map of python dependency prefix to their rpm python- flavour prefix
 PYTHON_BDIST_RPM_PREFIX_MAP = {
+    'future': 'python2-future',
     'pycrypto': 'python-crypto',
 }
 
